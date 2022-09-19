@@ -75,6 +75,12 @@ $border : 1px solid black;
                 background-color:rgb(1, 110, 110) ;
                 color: aliceblue;
                 font-size: .8rem;
+                box-shadow: inset 0 0 0 0 black;
+                &:hover {
+                    box-shadow: inset 110px 0 0 0 black;
+                    color: aliceblue;
+                    transition: ease-in-out .8s;
+                }
                 a {
                     text-decoration: none;
                     color: aliceblue;
@@ -218,6 +224,11 @@ $border : 1px solid black;
                     a {
                         margin-top: 10px;
                         font-size: .7rem;
+                        box-shadow: inset 0 0 0 0 teal;
+                         &:hover {
+                            box-shadow: inset 110px 0 0 0 teal;
+                            transition: ease-in-out .9s;
+                        }
                         
                     }
                 }

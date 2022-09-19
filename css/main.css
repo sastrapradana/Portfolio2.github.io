@@ -77,6 +77,16 @@ html {
   background-color: #016e6e;
   color: aliceblue;
   font-size: .8rem;
+  -webkit-box-shadow: inset 0 0 0 0 black;
+          box-shadow: inset 0 0 0 0 black;
+}
+
+.section-hero .hero .text button:hover {
+  -webkit-box-shadow: inset 110px 0 0 0 black;
+          box-shadow: inset 110px 0 0 0 black;
+  color: aliceblue;
+  -webkit-transition: ease-in-out .8s;
+  transition: ease-in-out .8s;
 }
 
 .section-hero .hero .text button a {
@@ -249,6 +259,15 @@ html {
 .project .row .container .card .card-body a {
   margin-top: 10px;
   font-size: .7rem;
+  -webkit-box-shadow: inset 0 0 0 0 teal;
+          box-shadow: inset 0 0 0 0 teal;
+}
+
+.project .row .container .card .card-body a:hover {
+  -webkit-box-shadow: inset 110px 0 0 0 teal;
+          box-shadow: inset 110px 0 0 0 teal;
+  -webkit-transition: ease-in-out .9s;
+  transition: ease-in-out .9s;
 }
 
 .contact {
