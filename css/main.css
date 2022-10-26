@@ -37,13 +37,13 @@ html {
 }
 
 #navbar .container .brand {
-  font-size: 1.5rem;
   font-family: "Signika Negative", sans-serif;
   font-weight: bold;
   margin-left: 10px;
 }
 
 #navbar .container .brand h1 {
+  font-size: 1.3rem;
   font-weight: bold;
   padding-top: 5px;
 }
@@ -141,9 +141,9 @@ html {
   height: max-content;
   padding: 5px;
   position: absolute;
-  background-color: rgba(69, 219, 187, 0.7);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  background-color: rgba(3, 75, 55, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   color: black;
   border-radius: 10px;
   right: 10px;
