@@ -12,26 +12,48 @@
       href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,400;1,700&family=DynaPuff&family=Merriweather:wght@400;700&family=Poppins:wght@400;500&family=Roboto+Mono:wght@100;500&family=Roboto:wght@100&family=Signika+Negative:wght@300;400&family=Ubuntu&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .light {
+        background-image: url(./svg/moon.png);
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-position: center;
+      }
+      .dark {
+        background-image: url(./svg/dark.png);
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
     <title>Portfolio</title>
   </head>
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg">
+
+  <section id="navbar">
     <div class="container">
-      <a class="navbar-brand" href="#">My<span>Portfolio</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link" aria-current="page" href="#home">Home</a>
-          <a class="nav-link" href="#about">About</a>
-          <a class="nav-link" href="#Project">Project</a>
-          <a class="nav-link" href="#Contact">Contact</a>
+      <div class="brand">
+        <h1>My<span>Portfolio</span></h1>
+      </div>
+      <div class="navi">
+        <div id="hamburger" name="hamburger">
+          <span class="a"></span>
+          <span class="b"></span>
+          <span class="c"></span>
+        </div>
+        <div class="hidden" id="nav-menu">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Project">Project</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </nav>
-  <!-- end nacbar -->
+  </section>
+
   <!-- hero -->
   <section class="section-hero">
     <div class="hero">
@@ -169,6 +191,8 @@
       <p>Copyright By | <span>Sastra Pradana🎈</span></p>
     </div>
   </footer>
+  <!-- js sendiri -->
+  <script src="./img/main.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   <body></body>

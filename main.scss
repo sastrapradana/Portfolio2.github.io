@@ -1,44 +1,134 @@
 * {
     font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
-    height: 1000px;
 }
+
 $font-judul : "Signika Negative", sans-serif;
 $border : 1px solid black;
 
-
-// navbar
-.container {
-    .navbar-brand {
-        font-size: 1.7rem;
-        font-family: $font-judul;
-        font-weight: bold;
-        margin-left: 10px;
-        span {
-            color: teal;
+#navbar {
+    width: 100%;
+    height: max-content;
+    position: fixed;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    .container {
+        position: relative;
+        max-width: 90%;
+        height: 50px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .brand {
+            font-size: 1.5rem;
+            font-family: $font-judul;
+            font-weight: bold;
+            margin-left: 10px;
+            h1 {
+                font-weight: bold;
+                padding-top: 5px;
+                span {
+                    color: teal;
+                }
+            }
+        }
+        .navi {
+            display: flex;
+            align-items: center;
+            padding: 4px 0;
+            
+            #hamburger {
+                display: block;
+                position: absolute;
+                right: 0;
+                cursor: pointer;
+                span {
+                    width: 25px;
+                    height: 2px;
+                    margin: 5px;
+                    display: block;
+                    background-color: black;
+                    transition: .2s ease-in-out;
+                }
+            }
+            #nav-menu {
+                box-sizing: border-box;
+                ul {
+                    li {
+                        list-style: none;
+                        padding: 5px 0;
+                        padding-left: -10px;
+                        list-style: none;
+                        a {
+                            padding-right: 25px;
+                            display: block;
+                            text-align: center;
+                            text-decoration: none;
+                            color: black;
+                            text-align: center;
+                            font-family: monospace;
+                            font-size: 1rem;
+                            font-weight: 600;
+                            &:hover {
+                                color: rgb(120, 117, 117);
+                                transition: .2s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
-
-
-    .nav-link {
-        font-size: .8rem;
-        color: black;
-        font-weight: 600;
-        margin-right: 15px;
-        margin-left: 10px;
-    }
 }
-        
+// custom css untuk js
+.hamburger-active  > span:nth-child(1) {
+    transform: rotate(45deg) ;
+    transform-origin: 10% 40%;
+}
+.hamburger-active  > span:nth-child(2) {
+    transform: scale(0);
+}
+.hamburger-active  > span:nth-child(3) {
+    transform: rotate(-45deg) ;
+    transform-origin:  10% 30%;
+}
 
+.hidden {
+    visibility: hidden;
+}
+.list {
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+    position: absolute;
+    background-color: rgba(69, 219, 187, 0.7);
+    backdrop-filter: blur(5px);
+    color: black;
+    border-radius: 10px;
+    right: 10px;
+    top: 100%;
+    transition: .2s ease-in-out;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
 
+// .navbar-fixed {
+//     background-color: rgba(255, 255, 255, 0.3);
+//     backdrop-filter: blur(5px);
+//     z-index: 100;
+//     position: fixed;
+// }
 
-// end navbar
+// end custom
 // hero 
 .section-hero {
     width: 100%;
+    padding-top: 50px;
     .hero {
         width: 100%;
         margin: auto;
@@ -72,14 +162,14 @@ $border : 1px solid black;
                 font-weight: 600;
             }
             button {
-                background-color:rgb(1, 110, 110) ;
+                background-color:teal;
                 color: aliceblue;
                 font-size: .8rem;
                 box-shadow: inset 0 0 0 0 black;
                 &:hover {
-                    box-shadow: inset 110px 0 0 0 black;
+                    box-shadow: inset 150px 0 0 0 black;
                     color: aliceblue;
-                    transition: ease-in-out .8s;
+                    transition: ease-in-out .7s;
                 }
                 a {
                     text-decoration: none;
@@ -211,10 +301,20 @@ $border : 1px solid black;
         width: 80%;
         margin: auto;
         .container {
+            width: max-content;
             .card {
-                &:hover {
+                padding: 5px 0;
+                border-radius: 15px;
+                border: 1px solid black;
+                overflow: hidden;
+                cursor: pointer;
+                &:hover  {
                     box-shadow: 15px 20px 25px -5px rgba(0,0,0,0.3);
                     transition: .5s ease-in-out;
+                    background-color: rgb(0, 0, 0);
+                }
+                img {
+                    margin-top: -5px;
                 }
                 .card-body {
                     h5 {
@@ -225,9 +325,9 @@ $border : 1px solid black;
                         margin-top: 10px;
                         font-size: .7rem;
                         box-shadow: inset 0 0 0 0 teal;
-                         &:hover {
-                            box-shadow: inset 110px 0 0 0 teal;
-                            transition: ease-in-out .9s;
+                        &:hover {
+                            box-shadow: inset 150px 0 0 0 teal;
+                            transition: ease-in-out .7s;
                         }
                         
                     }
@@ -370,14 +470,30 @@ footer {
 // desktop
 @media (min-width: 992px) {
     // navbar
-    .container {
-        .navbar-brand {
-            font-size: 2rem;
-            margin-left: 0%;
-        }
-        .nav-link {
-            
-            margin-left: 0;
+    #navbar {
+        .container {
+            max-width: 80%;
+            .brand {
+                h1 {
+                    font-size: 1.7rem;
+                }
+            }
+            .navi {
+                #hamburger {
+                    display: none;
+                }
+            }
+            #nav-menu {
+                visibility: visible;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                ul {
+                    margin-top: 15px;
+                    display: flex;
+                    align-items: center;
+                    }
+            }
         }
     }
     // end navbar
